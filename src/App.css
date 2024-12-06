@@ -336,3 +336,107 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+
+
+
+/* Top Section Styling */
+.top_section {
+  background-color: #f7f7f7;
+  padding: 100px 0;
+}
+
+.slider_cont_section {
+  padding: 20px;
+}
+
+.slider_cont_section h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.slider_cont_section h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.slider_cont_section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.button_section a {
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button_section .btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.button_section .btn-outline-primary {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+
+.button_section a:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.button_section .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Carousel Image Styling */
+.carousel-item img {
+  object-fit: cover;
+  height: 400px;  /* Adjust to fit your design needs */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .top_section {
+    padding: 80px 0;
+  }
+
+  .slider_cont_section h3 {
+    font-size: 28px;
+  }
+
+  .slider_cont_section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_cont_section {
+    text-align: center;
+  }
+
+  .button_section {
+    text-align: center;
+  }
+
+  .col-lg-6 {
+    margin-bottom: 30px;
+  }
+
+  .carousel-item img {
+    height: 300px;
+  }
+}

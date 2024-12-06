@@ -8,7 +8,7 @@ import Profile from '../pages/Customer/Profile';
 function CustomerLayout() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="">
         <Routes>
           <Route path="/dashboard" element={<CustomerDashboard />} />
           <Route path="/book-service" element={<BookService />} />

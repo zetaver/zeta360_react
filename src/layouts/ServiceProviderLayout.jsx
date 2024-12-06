@@ -8,7 +8,7 @@ import ProviderReports from '../pages/ServiceProvider/Reports';
 function ServiceProviderLayout() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="">
         <Routes>
           <Route path="dashboard" element={<ProviderDashboard />} />
           <Route path="services" element={<ManageServices />} />

@@ -8,7 +8,7 @@ import SupervisorProfile from '../pages/Supervisor/Profile';
 function SupervisorLayout() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="">
         <Routes>
           <Route path="dashboard" element={<SupervisorDashboard />} />
           <Route path="providers" element={<ManageProviders />} />

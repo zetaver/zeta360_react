@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Clock, CheckCircle, AlertCircle } from "lucide-react";
-import { Dropdown } from "react-bootstrap"; // Import Dropdown from react-bootstrap
+import { Dropdown } from "react-bootstrap";
 
 function Dashboard() {
   const [form, setForm] = useState({ title: "", description: "", image: null });

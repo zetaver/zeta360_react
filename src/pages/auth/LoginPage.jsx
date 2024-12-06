@@ -29,16 +29,23 @@ const LoginPage = () => {
 
       if (response && response.data["token"] && response.data["role"]) {
         saveAuthData(response.data["token"], response.data["role"]);
+        const profileIsCompleted = response.data["profile_is_completed"];
         if (response.data["role"] === "admin") navigate("/admin");
-        else if (response.data["role"] === "customer") navigate("/customer/dashboard");
-        else if (response.data["role"] === "service_provider") navigate("/provider");
-        else if (response.data["role"] === "supervisor") navigate("/supervisor");
+        else if (response.data["role"] === "customer") {
+          if (profileIsCompleted) {
+            navigate("/customer/dashboard");
+          } else {
+            navigate("/customer/profile");
+          }
+        } else if (response.data["role"] === "service_provider")
+          navigate("/provider");
+        else if (response.data["role"] === "supervisor")
+          navigate("/supervisor");
         else navigate("/");
       } else {
         setError("Invalid login response. Please try again.");
       }
     } catch (err) {
-
       if (err.response && err.response.data) {
         setError(err.response.data.message || "Invalid email or password.");
       } else {
