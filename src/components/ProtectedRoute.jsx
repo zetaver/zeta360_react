@@ -1,25 +1,24 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '../utils/auth';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useApiContext } from "../context/ApiContext"; 
 
 function ProtectedRoute({ children, role }) {
-  const { user } = useAuth();
+  const { token, role: userRole } = useApiContext();
 
-  if (!user) {
-    return <Navigate to="/login" replace />;
+  if (!token) {
+    return <Navigate to="/login" />;
   }
 
-  if (user.role !== role) {
+  if (userRole !== role) {
     const redirectPath = {
-      admin: '/admin/dashboard',
-      service_provider: '/provider/dashboard',
-      customer: '/customer/dashboard',
-      supervisor: '/supervisor/dashboard',
-    }[user.role];
-    
+      admin: "/admin/dashboard",
+      service_provider: "/provider/dashboard",
+      customer: "/customer/dashboard",
+      supervisor: "/supervisor/dashboard",
+    }[userRole];
+
     return <Navigate to={redirectPath} replace />;
   }
-
   return children;
 }
 

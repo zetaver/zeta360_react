@@ -10,10 +10,10 @@ function CustomerLayout() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <Routes>
-          <Route path="dashboard" element={<CustomerDashboard />} />
-          <Route path="book-service" element={<BookService />} />
-          <Route path="orders" element={<MyOrders />} />
-          <Route path="profile" element={<Profile />} />
+          <Route path="/dashboard" element={<CustomerDashboard />} />
+          <Route path="/book-service" element={<BookService />} />
+          <Route path="/orders" element={<MyOrders />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>

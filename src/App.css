@@ -1,0 +1,338 @@
+/* Import slick carousel styles directly without the tilde */
+@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick-theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+/* Hero Section with Image Slider */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.slider-container {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 800px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-button {
+  background-color: #ffeb3b;
+  color: #0d6efd;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.cta-button:focus {
+  outline: none;
+}
+
+/* Roles Section */
+.roles {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.roles h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.role {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.role h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.role p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Register Section */
+.register {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.register h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.register p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons .cta-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.buttons .cta-button:first-child {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.buttons .cta-button:last-child {
+  background-color: #ffeb3b;
+  color: #0d6efd;
+}
+
+.buttons .cta-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .roles {
+    padding: 30px 0;
+  }
+
+  .role {
+    padding: 20px;
+  }
+
+  .buttons .cta-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+/* General Styling for the Header */
+.header {
+  background-color: #0d6efd; /* Primary color */
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ffeb3b; /* Hover color */
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-3px);
+}
+
+.auth-button:focus {
+  outline: none;
+}
+
+.auth-button:first-child {
+  background-color: transparent;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+}
+
+.auth-button:first-child:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.auth-button:last-child {
+  background-color: #0d6efd;
+  color: white;
+  border: 2px solid #0d6efd;
+}
+
+.auth-button:last-child:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .navigation li {
+    margin: 10px 0;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
